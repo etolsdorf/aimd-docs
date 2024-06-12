@@ -1,0 +1,9 @@
+site_name: AI-MD
+theme:
+  name: material
+  logo: images/logo.png
+  palette:
+    scheme: slate
+    primary: black
+extra_css:
+  - stylesheets/extra.css

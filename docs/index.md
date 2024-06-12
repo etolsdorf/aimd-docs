@@ -112,6 +112,6 @@ On registration with `AI-MD`, you provide a **redirect URL** to receive the symp
 | Parameter Name | Description                                                                       |
 | -------------- | --------------------------------------------------------------------------------- |
 | **results**    | base64-encoded JSON string. On decoding, will consist of:                         |
-|                | - a `vitals` key consisting of user's vitals measured by the face scan.           |
-|                | - If `symptoms` were provided, a `conditions` key exists with possible diagnoses. |
+|                | a `vitals` key consisting of user's vitals measured by the face scan.           |
+|                | If `symptoms` were provided, a `conditions` key exists with possible diagnoses. |
 | **session_id** | A string to identify the assessment that was provided with the `redirect_url`.    |

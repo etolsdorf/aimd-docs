@@ -109,9 +109,10 @@ Please redirect the user's browser to this URL to complete the face scan, and st
 
 On registration with `AI-MD`, you provide a **redirect URL** to receive the symptom checker results. Upon completion of the assessment, the user's browser will redirect to your provided redirect URL with two query parameters:
 
-| Parameter Name | Description                                                                       |
-| -------------- | --------------------------------------------------------------------------------- |
-| **results**    | base64-encoded JSON string. On decoding, will consist of:                         |
-|                | a `vitals` key consisting of user's vitals measured by the face scan.           |
-|                | If `symptoms` were provided, a `conditions` key exists with possible diagnoses. |
-| **session_id** | A string to identify the assessment that was provided with the `redirect_url`.    |
+| Parameter Name | Description                                                                                                                                            |
+| -------------- |--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **results**    | base64-encoded JSON string. On decoding, will consist of:                                                                                              |
+|                | a `vitals` key consisting of user's vitals measured by the face scan.                                                                                  |
+|                | If `symptoms` were provided, a `conditions` key exists with possible diagnoses.                                                                        |
+|                | If `symptoms` were provided and clien type `product recommendation` is `True` , a `recommended_product` key exists with possible recommended products. |
+| **session_id** | A string to identify the assessment that was provided with the `redirect_url`.                                                                         |

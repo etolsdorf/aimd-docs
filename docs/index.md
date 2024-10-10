@@ -9,7 +9,7 @@ The AI-MD SDK allows developers to quickly add AI-MD's symptom checker, includin
 Please contact AI-MD for an **API key** generated for your client user. Once registered, provide the API key in the `Authorization` header to all HTTP calls made to the API:
 
 ```http
-GET my.ai-md.com HTTP/1.1
+GET my.ai-md.com:8000 HTTP/1.1
 Content-Type: application/json
 ...
 Authorization: YOUR_API_KEY
@@ -24,7 +24,7 @@ If authorization is unsuccessful, you may receive one of the following status re
 
 ## Symptom Checker
 
-To access the symptom checker, send a `POST` request to the assessment URL: `my.ai-md.com/client/assess`. The JSON body send with the POST request should contain the user's device type, user demographics and symptom data:
+To access the symptom checker, send a `POST` request to the assessment URL: `my.ai-md.com:8000/client/assess`. The JSON body send with the POST request should contain the user's device type, user demographics and symptom data:
 
 | Parameter Name                        | Description                                                                                       | Possible Values                            |
 | ------------------------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------ |
@@ -74,7 +74,7 @@ Without symptoms:
 
 ```bash
 curl -X 'POST' \
-  'https://my.ai-md.com/client/assess' \
+  'https://my.ai-md.com:8000/client/assess' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
